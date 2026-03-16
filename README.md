@@ -88,18 +88,18 @@ The app uses EVM wallets (MetaMask, Rabby, etc. via wagmi) and **SIWE** sessions
 ```
 src/
 ├── app/                 # Next.js App Router pages
-│   ├── page.tsx        # Landing page with animated hero
+│   ├── page.jsx        # Landing page with animated hero
 │   ├── exchange/       # Order book and trading interface
 │   ├── sell/           # Create sell offers
 │   ├── trade/[id]/     # Multi-step trading flow
 │   └── how-it-works/   # Protocol explanation
 ├── components/
 │   ├── ui/             # shadcn/ui components
-│   └── navigation.tsx  # Navigation with wallet integration
+│   └── navigation.jsx  # Navigation with wallet integration
 └── lib/
-    ├── wallet.ts       # Nautilus wallet connection
-    ├── constants.ts    # Mock data and configuration
-    └── utils.ts        # Utility functions
+    ├── wallet.js       # Wallet helpers
+    ├── constants.js    # Mock data and configuration
+    └── utils.js        # Utility functions
 ```
 
 ## 🎭 Mock Data vs Real Integration
@@ -158,7 +158,7 @@ We welcome contributions! Please:
 5. **Submit** a pull request
 
 ### Code Style
-- **TypeScript** for type safety
+- **JavaScript** (Next.js `.js` / `.jsx`)
 - **Tailwind CSS** for styling
 - **ESLint/Prettier** for formatting
 - **Semantic** component names
