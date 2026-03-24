@@ -9,9 +9,7 @@ async function main() {
   const app = await buildApp();
 
   await app.listen({ port, host: "0.0.0.0" });
-  app.log.info(
-    `API listening on :${port} (chainEnabled=${isChainEnabled()})`
-  );
+  app.log.info(`API listening on :${port} (chainEnabled=${isChainEnabled()})`);
 }
 
 main().catch((err) => {

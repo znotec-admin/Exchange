@@ -52,7 +52,7 @@ async function verifySiwe({ message, signature }) {
   } catch (err) {
     throw httpError(
       401,
-      err instanceof Error ? err.message : "SIWE verification failed"
+      err instanceof Error ? err.message : "SIWE verification failed",
     );
   }
 

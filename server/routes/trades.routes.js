@@ -8,7 +8,7 @@ async function tradesRoutes(app) {
     return {
       trades: tradesService.listMyTrades(
         address,
-        role === "buyer" || role === "seller" ? role : undefined
+        role === "buyer" || role === "seller" ? role : undefined,
       ),
     };
   });
@@ -32,7 +32,7 @@ async function tradesRoutes(app) {
     const trade = await tradesService.markFunded(
       seller,
       request.params.id,
-      createTxHash
+      createTxHash,
     );
     return { trade };
   });
